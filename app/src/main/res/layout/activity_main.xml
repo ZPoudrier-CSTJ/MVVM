@@ -4,15 +4,193 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".presentation.main.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imvCube"
+        android:layout_width="64sp"
+        android:layout_height="64sp"
+        android:src="@drawable/cube"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imvEnergy"
+        app:layout_constraintTop_toTopOf="@+id/imvEnergy" />
+
+    <ImageView
+        android:id="@+id/imvEnergy"
+        android:layout_width="64sp"
+        android:layout_height="64sp"
+        android:src="@drawable/energy"
+        app:layout_constraintEnd_toStartOf="@+id/imvCube"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imvShield"
+        app:layout_constraintTop_toTopOf="@+id/imvShield" />
 
     <TextView
+        android:id="@+id/txvEnergy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/imvEnergy"
+        app:layout_constraintStart_toStartOf="@+id/imvEnergy"
+        app:layout_constraintTop_toBottomOf="@+id/imvEnergy" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Energy"
+        app:layout_constraintEnd_toEndOf="@+id/imvEnergy"
+        app:layout_constraintStart_toStartOf="@+id/imvEnergy"
+        app:layout_constraintTop_toBottomOf="@+id/txvEnergy" />
+
+    <ImageView
+        android:id="@+id/imvPilote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/pilot04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvPiloteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imvPilote"
+        app:layout_constraintTop_toTopOf="@+id/imvPilote"
+        tools:text="Zachary" />
+
+    <TextView
+        android:id="@+id/txvLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txvPiloteName"
+        app:layout_constraintStart_toStartOf="@+id/txvPiloteName"
+        app:layout_constraintTop_toBottomOf="@+id/txvPiloteName"
+        tools:text="Level 18" />
+
+    <ImageView
+        android:id="@+id/imvHealth"
+        android:layout_width="64sp"
+        android:layout_height="64sp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/life"
+        app:layout_constraintEnd_toStartOf="@+id/imvShield"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvPilote" />
+
+    <TextView
+        android:id="@+id/txvShield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/imvShield"
+        app:layout_constraintStart_toStartOf="@+id/imvShield"
+        app:layout_constraintTop_toBottomOf="@+id/imvShield" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Shield"
+        app:layout_constraintEnd_toEndOf="@+id/imvShield"
+        app:layout_constraintStart_toStartOf="@+id/imvShield"
+        app:layout_constraintTop_toBottomOf="@+id/txvShield" />
+
+
+    <ImageView
+        android:id="@+id/imvShield"
+        android:layout_width="64sp"
+        android:layout_height="64sp"
+        android:src="@drawable/shield"
+        app:layout_constraintEnd_toStartOf="@+id/imvEnergy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imvHealth"
+        app:layout_constraintTop_toTopOf="@+id/imvHealth" />
+
+    <TextView
+        android:id="@+id/txvHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/imvHealth"
+        app:layout_constraintStart_toStartOf="@+id/imvHealth"
+        app:layout_constraintTop_toBottomOf="@+id/imvHealth" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Health"
+        app:layout_constraintEnd_toEndOf="@+id/imvHealth"
+        app:layout_constraintStart_toStartOf="@+id/imvHealth"
+        app:layout_constraintTop_toBottomOf="@+id/txvHealth" />
+
+    <TextView
+        android:id="@+id/txvCube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/imvCube"
+        app:layout_constraintStart_toStartOf="@+id/imvCube"
+        app:layout_constraintTop_toBottomOf="@+id/imvCube" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cube"
+        app:layout_constraintEnd_toEndOf="@+id/imvCube"
+        app:layout_constraintStart_toStartOf="@+id/imvCube"
+        app:layout_constraintTop_toBottomOf="@+id/txvCube" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/imvPilote"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@+id/slider"
+        app:layout_constraintTop_toTopOf="@+id/slider" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
