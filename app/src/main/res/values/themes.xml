@@ -17,5 +17,8 @@
     <style name="CustomTheme" parent="Theme.MVVM">
         <item name="android:background">@color/colorBackground</item>
         <item name="android:textColor">@color/colorText</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 </resources>

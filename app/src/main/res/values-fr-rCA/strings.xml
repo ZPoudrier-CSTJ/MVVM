@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MVVM</string>
+    <string name="txtRev">Révolution</string>
+    <string name="txtTraining">Training</string>
+    <string name="txtLevel">Niveau %d</string>
+    <string name="txtBtnStart">Démarrer</string>
+</resources>

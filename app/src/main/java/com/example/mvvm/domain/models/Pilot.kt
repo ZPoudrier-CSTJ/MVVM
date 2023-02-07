@@ -1,6 +1,7 @@
 package com.example.mvvm.domain.models
 
 import com.example.mvvm.core.Constants
+import kotlin.math.max
 import kotlin.random.Random
 
 
@@ -14,9 +15,9 @@ data class Pilot(var name: String, var life: Int, var cube: Int = 0) {
 
         fun fly(revolutions: Int, isTraining: Boolean = false){
                 if(!isTraining){
-                        _experience += revolutions * Random.nextInt(1, 2 *level)
+                        _experience += revolutions * Random.nextInt(1, 2 *level + 2)
                         life -= Random.nextInt(0,2)
-                        cube += Random.nextInt(0,2 *level)
+                        cube += Random.nextInt(0,2 *level + 1)
                 }
                 energie -= Random.nextInt(1, 3)
         }
@@ -27,7 +28,7 @@ data class Pilot(var name: String, var life: Int, var cube: Int = 0) {
 
         fun recharge(){
                 energie = Random.nextInt(0,10)
-                life = 10
+                life = max(10, life)
         }
 
 
