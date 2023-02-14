@@ -27,7 +27,7 @@ data class Pilot(var name: String, var life: Int, var cube: Int = 0) {
         }
 
         fun recharge(){
-                energie = Random.nextInt(0,10)
+                energie += Random.nextInt(0,10)
                 life = max(10, life)
         }
 

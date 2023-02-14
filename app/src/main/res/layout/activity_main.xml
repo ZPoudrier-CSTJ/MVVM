@@ -215,6 +215,9 @@
         android:id="@+id/imgPlanet"
         android:layout_width="256dp"
         android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="imgPlanetRecharge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -226,7 +229,10 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         app:srcCompat="@drawable/rocket"
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="480dp" />
+        app:layout_constraintCircle="@id/imgPlanet"
+        app:layout_constraintCircleAngle="69"
+        app:layout_constraintCircleRadius="120dp"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="479dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
